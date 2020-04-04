@@ -8,6 +8,12 @@ targets:
   drawing_generator:
     main: src/drawing_generator.cr
 
+dependencies:
+  stumpy_png:
+    github: stumpycr/stumpy_png
+    version: "~> 4.5"
+
+
 crystal: 0.32.1
 
 license: MIT
