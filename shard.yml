@@ -1,0 +1,13 @@
+name: drawing_generator
+version: 0.1.0
+
+authors:
+  - Afront <3943720+Afront@users.noreply.github.com>
+
+targets:
+  drawing_generator:
+    main: src/drawing_generator.cr
+
+crystal: 0.32.1
+
+license: MIT
