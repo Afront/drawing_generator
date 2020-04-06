@@ -12,7 +12,7 @@ module DrawingGenerator
   module ColourLovers
     def self.get_palette
       response = HTTP::Client.get "http://www.colourlovers.com/api/palettes/random?format=json"
-      JSON.parse(response.body)
+      JSON.parse(response.body)[0]["colors"]
     end
   end
 
