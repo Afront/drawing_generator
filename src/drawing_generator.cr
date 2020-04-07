@@ -12,7 +12,7 @@ module DrawingGenerator
   module ColourLovers
     def self.get_palette
       response = HTTP::Client.get "http://www.colourlovers.com/api/palettes/random?format=json"
-      JSON.parse(response.body)[0]["colors"].as_a.map { |s| s.as_s }
+      JSON.parse(response.body)[0]["colors"].as_a.map { |s| "#" + s.as_s }
     end
   end
 
@@ -22,7 +22,7 @@ module DrawingGenerator
 
   (0..255).each do |x|
     (0..255).each do |y|
-      canvas[x, y] = RGBA.from_hex "#" + palette.sample(1).first
+      canvas[x, y] = RGBA.from_hex palette.sample(1).first
     end
   end
 
