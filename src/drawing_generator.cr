@@ -26,5 +26,5 @@ module DrawingGenerator
     end
   end
 
-  StumpyPNG.write(canvas, "test.png")
+  StumpyPNG.write(canvas, "#{Time.utc.to_s}.png")
 end
